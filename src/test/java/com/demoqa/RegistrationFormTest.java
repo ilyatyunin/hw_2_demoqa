@@ -21,7 +21,7 @@ public class RegistrationFormTest {
     }
     @Test
     void fillFormTest() {
-        // Ввод переменных
+        // Input variables
         String firstName = "Ilya";
         String lastName = "Tyunin";
         String userEmail = "is_tyunin@gmail.com";
@@ -38,12 +38,12 @@ public class RegistrationFormTest {
         String state = "Haryana";
         String city = "Karnal";
 
-        // Открытие страницы
+        // Open website
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
-        // Заполнение формы регистрации
+        // Fill registration form
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(userEmail);
@@ -64,7 +64,7 @@ public class RegistrationFormTest {
 
         $("#submit").click();
 
-        // Проверка заполненных полей
+        // Check registration form
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave((text(firstName)),
                 text(lastName),
