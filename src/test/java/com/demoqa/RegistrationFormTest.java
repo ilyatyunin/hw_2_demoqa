@@ -49,6 +49,7 @@ public class hw_2_demoqa {
         $("#stateCity-wrapper").$(byText("Haryana")).click();
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Karnal")).click();
+
         $("#submit").click();
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
